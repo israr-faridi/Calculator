@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+        margin: auto;
+
+    }
+
+    #result {
+        width: 97%;
+        padding: 3.5% 0.5%;
+        margin-bottom: 1px;
+        border: 2px solid black;
+        border-radius: 12px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        margin-top: 10%;
+    }
+
+    .contain {
+        width: 25%;
+        border: 2px solid rgba(0, 0, 0, 0.699);
+        border-radius: 10px;
+        padding: 20px;
+        background-color: rgb(250, 173, 159);
+    }
+
+
+    .grid-container {
+        width: 98.5%;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .btn {
+        padding: 8% 2%;
+        margin: 3%;
+        font-size: 1.3rem;
+        background-color: rgb(108, 253, 253);
+        box-shadow: 3px 4px rgba(78, 74, 74, 0.76);
+        border-radius: 12px;
+    }
+
+    #clear {
+        padding: 2% 0%;
+        margin-top: 2.5%;
+        margin-left: 0.9%;
+        font-size: 1.5rem;
+        width: 96.9%;
+        background-color: rgb(108, 253, 253);
+        box-shadow: 3px 4px rgba(78, 74, 74, 0.76);
+        border-radius: 12px;
+    }
+
+
+    @media only screen and (max-width: 1230px) {
+
+        .contain {
+            width: 35%;
+            border: 2px solid rgba(0, 0, 0, 0.699);
+            padding: 20px;
+            background-color: rgb(250, 173, 159);
+        }
+    }
+
+    @media only screen and (max-width: 934px) {
+
+        .contain {
+            width: 45%;
+            border: 2px solid rgba(0, 0, 0, 0.699);
+            padding: 20px;
+            background-color: rgb(250, 173, 159);
+        }
+    }
+
+    @media only screen and (max-width: 730px) {
+
+        .contain {
+            width: 55%;
+            border: 2px solid rgba(0, 0, 0, 0.699);
+            padding: 20px;
+            background-color: rgb(250, 173, 159);
+        }
+    }
+
+
+    @media only screen and (max-width: 548px) {
+
+        .contain {
+            width: 70%;
+            border: 2px solid rgba(0, 0, 0, 0.699);
+            padding: 20px;
+            background-color: rgb(250, 173, 159);
+        }
+    }
+
+    @media only screen and (max-width: 430px) {
+        .container {
+            display: inline;
+            margin-top: 10%;
+        }
+
+        .contain {
+            width: 86%;
+            border: 2px solid rgba(0, 0, 0, 0.699);
+            padding: 20px;
+            background-color: rgb(250, 173, 159);
+        }
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="contain">
+            <h1>Calculator</h1>
+
+            <form name="form1">
+                <input type="text" id="result" name="answer">
+
+                <div class="grid-container">
+                    <input type="button" class="btn" value="1" onclick="form1.answer.value += '1'">
+                    <input type="button" class="btn" value="2" onclick="form1.answer.value += '2' ">
+                    <input type="button" class="btn" value="3" onclick="form1.answer.value += '3' ">
+                    <input type="button" class="btn" value="+" onclick="form1.answer.value += '+' ">
+                    <input type="button" class="btn" value="4" onclick="form1.answer.value += '4' ">
+                    <input type="button" class="btn" value="5" onclick="form1.answer.value += '5' ">
+                    <input type="button" class="btn" value="6" onclick="form1.answer.value += '6' ">
+                    <input type="button" class="btn" value="-" onclick="form1.answer.value += '-' ">
+                    <input type="button" class="btn" value="7" onclick="form1.answer.value += '7' ">
+                    <input type="button" class="btn" value="8" onclick="form1.answer.value += '8' ">
+                    <input type="button" class="btn" value="9" onclick="form1.answer.value += '9' ">
+                    <input type="button" class="btn" value="*" onclick="form1.answer.value += '*' ">
+                    <input type="button" class="btn" value="/" onclick="form1.answer.value += '/' ">
+                    <input type="button" class="btn" value="0" onclick="form1.answer.value += '0' ">
+                    <input type="button" class="btn" value="." onclick="form1.answer.value  += '.' ">
+                    <input type="button" class="btn" value="=" onclick="form1.answer.value =eval(form1.answer.value)">
+                </div>
+                <!-- <div class="bb"> -->
+                <input type="button" value="clear" onclick="form1.answer.value='' " id="clear">
+                <!-- </div> -->
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
